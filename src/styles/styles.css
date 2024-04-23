@@ -162,8 +162,8 @@ nav ul li a:hover {
   position: absolute;
   top: 300%;
   left: 0;
-  width: 60%;
-  height: 80%;
+  width: 70%;
+  height: 100%;
   background-color: var(--blå-firkant); /* Farve på din firkant */
   z-index: -1; /* Sørg for, at baggrundslaget ligger bag resten af indholdet */
 }

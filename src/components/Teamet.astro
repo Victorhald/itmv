@@ -1,0 +1,74 @@
+---
+import "../styles/styles.css";
+---
+
+<div class="grid_teamet">
+  <div class="team_member">
+    <a href="https://www.itmv.dk/pages/martha-nina-ozmec"><img src="img/martha.webp" alt="Martha" /><span><strong>Martha Nina Ozmec</strong> <br /> Chef for Mennesker og Udvikling</span></a>
+  </div>
+  <div class="team_member">
+    <a href="https://www.itmv.dk/pages/liv-bejer-heckmann"><img src="img/liv.webp" alt="Liv" /><span> <strong>Liv Bejer Heckmann</strong> <br /> Chef for Design og Udvikling</span></a>
+  </div>
+  <div class="team_member">
+    <a href="https://www.itmv.dk/pages/stefani-biber"><img src="img/stefani.webp" alt="Stefani" /><span> <strong>Stefani Biber</strong><br /> Designer, Projektleder og Mentor</span></a>
+  </div>
+  <div class="team_member">
+    <a href="https://www.itmv.dk/pages/luna-staerke"
+      ><img src="img/luna.webp" alt="Luna" /><span>
+        <strong>Luna Stærke</strong>
+        <br /> Designassistent</span
+      ></a
+    >
+  </div>
+</div>
+
+<style>
+  /* MØD TEAMET */
+
+  .mod_teamet {
+    margin: 20px 140px;
+  }
+
+  .grid_teamet {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 15px 140px;
+    gap: 30px;
+  }
+
+  .team_member {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .team_member img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .team_member span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(240, 240, 236, 0.653);
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    font-family: "Helvetica Neue Thin";
+    font-size: 1rem;
+    line-height: 30px;
+  }
+
+  .team_member:hover img {
+    transform: scale(1.1);
+  }
+
+  .team_member:hover span {
+    transform: translateY(0);
+  }
+</style>

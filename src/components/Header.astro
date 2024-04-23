@@ -1,0 +1,141 @@
+---
+import "../styles/styles.css";
+---
+
+<div class="logo">
+  <a href="https://www.itmv.dk/"><img src="/img/itmv_logo.png" alt="ITMV_Logo" /></a>
+</div>
+<div class="burger-menu">
+  <div class="burger-icon">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+</div>
+<nav>
+  <ul class="menu">
+    <li><a href="https://www.itmv.dk/collections/all">Shop</a></li>
+    <li><a href="https://www.itmv.dk/pages/om-itmv">Om os</a></li>
+    <li><a href="https://www.itmv.dk/pages/samarbejde">Samarbejder</a></li>
+    <li><a href="https://www.itmv.dk/pages/donation">Støt</a></li>
+    <li><a href="https://www.itmv.dk/pages/contact">Kontakt</a></li>
+    <li><a href="#index.html">Webfeature</a></li>
+  </ul>
+</nav>
+
+<style>
+  /* MENU */
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    color: var(--text-color);
+    position: sticky;
+
+    margin: 0;
+    font-family: "Helvectica Neue", sans-serif;
+    font-weight: 50;
+    font-style: normal;
+    letter-spacing: 0.01rem;
+  }
+
+  .logo img {
+    max-width: 100px;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
+  nav ul li {
+    margin-right: 40px;
+  }
+
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+
+  nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+  }
+
+  nav ul li a:hover {
+    color: var(--logo-color);
+  }
+
+  .burger_menu {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .logo img {
+      max-width: 80px;
+    }
+
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 100%;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .menu.show {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--background-color);
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      width: 100%;
+      line-height: 1rem;
+    }
+
+    /* Stil burgermenu-ikonet */
+    .burger-icon {
+      width: 30px;
+      height: 20px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    /* Stil linjerne i burgermenu-ikonet */
+    .line {
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      position: absolute;
+      left: 0;
+      transition: transform 0.3s ease;
+    }
+
+    /* Stil til at dreje linjerne til et kryds */
+    .open .line:nth-child(1) {
+      transform: rotate(45deg);
+      top: 8px;
+    }
+
+    .open .line:nth-child(2) {
+      transform: rotate(-45deg);
+      top: 8px;
+    }
+
+    .open .line:nth-child(3) {
+      opacity: 0;
+    }
+  }
+</style>

@@ -1,0 +1,416 @@
+@import url(https://db.onlinewebfonts.com/c/fd2bae1d67c789adf8a1ea32e081e495?family=Helvetica+Neue+Thin);
+
+:root {
+  --text-color: #282e43;
+  --background-color: #efeeed;
+  --text-color-footer: #3e5c6d;
+  --button-color: #dc8570;
+  --logo-color: #ed6447;
+  --gul-firkant: #ecebe1;
+  --lyserød-firkant: #e9dbd8;
+  --blå-firkant: #dde9ee;
+}
+
+img {
+  width: 100%;
+}
+
+/* BODY */
+
+body {
+  background-color: var(--background-color);
+}
+
+/* MENU */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  color: var(--text-color);
+  position: sticky;
+
+  margin: 0;
+  font-family: "Helvectica Neue", sans-serif;
+  font-weight: 50;
+  font-style: normal;
+  letter-spacing: 0.01rem;
+}
+
+.logo img {
+  max-width: 100px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 40px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 1rem;
+}
+
+nav ul li a:hover {
+  color: var(--logo-color);
+}
+
+.burger_menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    max-width: 80px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu.show {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 100%;
+    line-height: 1rem;
+  }
+
+  /* Stil burgermenu-ikonet */
+  .burger-icon {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  /* Stil linjerne i burgermenu-ikonet */
+  .line {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    transition: transform 0.3s ease;
+  }
+
+  /* Stil til at dreje linjerne til et kryds */
+  .open .line:nth-child(1) {
+    transform: rotate(45deg);
+    top: 8px;
+  }
+
+  .open .line:nth-child(2) {
+    transform: rotate(-45deg);
+    top: 8px;
+  }
+
+  .open .line:nth-child(3) {
+    opacity: 0;
+  }
+}
+
+/* FIRKANTER I BAGGRUNDEN */
+
+.yellow_square {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 47%;
+  height: 119%;
+  background-color: var(--gul-firkant); /* Farve på din firkant */
+  z-index: -1; /* Sørg for, at baggrundslaget ligger bag resten af indholdet */
+}
+
+.red_square {
+  position: absolute;
+  top: 116%;
+  right: 0;
+  width: 100%;
+  height: 79%;
+  background-color: var(--lyserød-firkant); /* Farve på din firkant */
+  z-index: -1; /* Sørg for, at baggrundslaget ligger bag resten af indholdet */
+}
+
+.blue_square {
+  position: absolute;
+  top: 300%;
+  left: 0;
+  width: 60%;
+  height: 80%;
+  background-color: var(--blå-firkant); /* Farve på din firkant */
+  z-index: -1; /* Sørg for, at baggrundslaget ligger bag resten af indholdet */
+}
+
+.yellow_square2 {
+  position: absolute;
+  top: 381%;
+  right: 0;
+  width: 45%;
+  height: 130%;
+  background-color: var(--gul-firkant); /* Farve på din firkant */
+  z-index: -1; /* Sørg for, at baggrundslaget ligger bag resten af indholdet */
+}
+
+.red_square2 {
+  position: absolute;
+  top: 520%;
+  left: 0;
+  width: 65%;
+  height: 90%;
+  background-color: var(--lyserød-firkant); /* Farve på din firkant */
+  z-index: -1; /* Sørg for, at baggrundslaget ligger bag resten af indholdet */
+}
+
+/* STYLES */
+
+h1 {
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 3.4rem;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+h2 {
+  font-family: "Helvetica Neue Light";
+  font-size: 2.2rem;
+  line-height: 70px;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+h3 {
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "Helvetica Neue Thin";
+  font-size: 1.15rem;
+  line-height: 40px;
+  color: var(--text-color);
+}
+
+.primary_button {
+  text-decoration: none;
+  padding: 15px 25px;
+  background-color: var(--button-color);
+  color: var(--background-color);
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 1.1rem;
+  display: inline-block; /* Sørg for, at knappen har en passende display-værdi */
+  transition: transform 0.3s ease; /* Tilføj en overgangseffekt for jævn animation */
+  cursor: pointer; /* Ændre musemarkøren ved hover */
+}
+
+.primary_button:hover {
+  transform: scale(1.1); /* Forstør knappen ved hover */
+  font-weight: 600;
+}
+
+/* LAYOUT */
+
+.nal_og_trad {
+  position: absolute;
+  top: 220px;
+  right: 170px;
+  width: 15%;
+  rotate: 28deg;
+}
+
+.overskrift_øverst {
+  text-align: center;
+  margin-bottom: 5%;
+  margin-top: 7%;
+}
+
+.grid_overst {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  width: 100%;
+}
+
+.tekst_grid_overst {
+  padding-left: 10%;
+}
+
+.grid_repair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  width: 80%;
+  margin: 7% auto;
+}
+
+.grid_repair_1 {
+  margin: 8% auto;
+}
+
+.bojle {
+  width: 60%;
+  margin: 2px 97px;
+}
+
+.hvad_kan {
+  margin: 0 10%;
+}
+
+.grid_2_tekst_2 {
+  padding-top: 2%;
+}
+
+.hjerte {
+  width: 30%;
+  margin: 2px 207px;
+}
+
+.olena {
+  width: 80%;
+  margin: 10px 60px;
+}
+
+.img_grid_3 {
+  width: 170px;
+  height: 230px;
+}
+
+.showroom {
+  height: 790px;
+  width: auto;
+}
+
+.itradmedverden {
+  margin: 0;
+}
+
+/* MØD TEAMET */
+
+.mod_teamet {
+  margin: 20px 140px;
+}
+
+.grid_teamet {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 15px 140px;
+  gap: 30px;
+}
+
+.team_member {
+  position: relative;
+  overflow: hidden;
+}
+
+.team_member img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.team_member span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(240, 240, 236, 0.653);
+  color: var(--text-color);
+  text-align: center;
+  padding: 10px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  font-family: "Helvetica Neue Thin";
+  font-size: 1rem;
+  line-height: 30px;
+}
+
+.team_member:hover img {
+  transform: scale(1.1);
+}
+
+.team_member:hover span {
+  transform: translateY(0);
+}
+
+/* Andre samarbejder */
+
+.samarbejder {
+  margin-top: 10%;
+}
+
+.samarbejde_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin: 15px 140px;
+  gap: 50px;
+}
+
+.samarbejde_div {
+  position: relative;
+  overflow: hidden;
+}
+
+.samarbejde_div img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.samarbejde_div span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(240, 240, 236, 0.653);
+  color: var(--text-color);
+  text-align: center;
+  padding: 10px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  font-family: "Helvetica Neue Thin";
+  font-size: 1.3rem;
+  line-height: 30px;
+}
+
+.samarbejde_div:hover img {
+  transform: scale(1.1);
+}
+
+.samarbejde_div:hover span {
+  transform: translateY(0);
+}

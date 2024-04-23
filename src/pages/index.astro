@@ -1,16 +1,179 @@
 ---
-
+import "../styles/styles.css";
+import Header from "../components/Header.astro";
+import Teamet from "../components/Teamet.astro";
+import Samarbejder from "../components/Samarbejder.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Webfeature</title>
+
+    <style>
+      @import url("https://fonts.cdnfonts.com/css/helvetica-neue-55");
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet" />
+
+    <link href="https://db.onlinewebfonts.com/c/0e6de1ec911a2e267ff136bbdd384a44?family=Helvetica+Neue+Light" rel="stylesheet" />
+    <link href="https://db.onlinewebfonts.com/c/fd2bae1d67c789adf8a1ea32e081e495?family=Helvetica+Neue+Thin" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <Header />
+    </header>
+
+    <main>
+      <div class="yellow_square"></div>
+
+      <div><img src="img/nål_og_tråd.svg" alt="nål og tråd der former et hjerte" class="nal_og_trad" /></div>
+
+      <div class="overskrift_øverst">
+        <h1>Samarbejd med os</h1>
+      </div>
+
+      <div class="grid_overst">
+        <div class="tekst_grid_overst">
+          <p>
+            “I tråd med verden” er en socialøkonomisk virksomhed, som kæmper for at gøre en forskel for udsatte kvinder i Danmark.
+
+            <br />
+            <br />
+            <br />
+
+            Vi brænder for den grønne omstilling ved at skabe en cirkulær produktion, hvor vi genanvender kasserede tekstiler, og giver gammelt tøj nyt liv igennem vores “Repair Service”.
+
+            <br />
+            <br />
+            <br />
+
+            En investering i os er en investering i en bedre fremtid for udsatte kvinder - Tag ansvar i dag.
+          </p>
+        </div>
+        <div>
+          <img src="img/overste_img.png" alt="Kvinder" />
+        </div>
+      </div>
+
+      <div class="red_square"></div>
+
+      <div class="grid_repair grid_repair_1">
+        <div class="grid_2_tekst_1">
+          <h2>REPAIR SERVICE TIL JERES VIRKSOMHED</h2>
+
+          <p>Styrk din virksomheds E (environmental) & S (social) i jeres ESG mål, og gør genanvendelse let og tilgængelig for dine medarbejdere.</p>
+
+          <img src="img/recycle_bøjle.png" alt="Recycle Bøjle" class="bojle" />
+        </div>
+
+        <div class="grid_2_tekst_2">
+          <p>
+            Vi tilbyder reparation, tilpasning og fornyelse af tøj til din virksomheds medarbejdere. Vores team består af to syerske og en designer, der vil sidde klar ved symaskinerne til at hjælpe jer med at forlænge levetiden af jeres tøj og uniformer.
+
+            <br /><br />
+
+            Et samarbejde med os er et skridt i en mere bæredygtig retning. Ifølge Finansforbundet vægter socialt ansvar og bæredygtighed højt hos medarbejderne - en bæredygtig arbejdsplads er en god arbejdsplads.
+            <br /><br />
+          </p>
+
+          <a href="https://www.itmv.dk/pages/repair-service" class="primary_button">Book repair service her</a>
+        </div>
+      </div>
+
+      <h2 class="hvad_kan">Hvad kan i forvente af et samarbejde med os?</h2>
+
+      <div class="grid_repair">
+        <div class="grid_2_tekst_1">
+          <p>
+            <strong>Hvor ofte?</strong><br />
+            I vores “Kvartale” samarbejdspakke kommer vores team ud én gang i kvartalet, altså 4 gange om året.<br /><br />
+
+            <strong>Dette indebærer</strong><br />
+            6 timer, 3 personer pr. gang., der, alt efter omfanget, kan lave x reparationer i timen.<br /><br />
+
+            <strong>Pris</strong><br />
+            Pris: 18.000 kr. ex moms (4500 kr. pr. gang)
+          </p>
+        </div>
+
+        <div class="grid_2_tekst_2">
+          <img src="img/hjerte_stiplet.png" alt="Stiplet Hjerte" class="hjerte" />
+          <p>
+            <br />”KAB er i forvejen en meget tilfreds kunde hos ITMV – og vi er vilde med konceptet med Repair Service, der på alle parametre taler direkte ind i vores arbejde med at sætte mest muligt fokus på bæredygtige løsninger i hverdagen i et stort kontorhus. Det kommer også til at indgå i vores arbejde med ESG.”
+            <br />
+            <strong>Sanne Kjær, Kundedirektør KAB</strong><br /><br />
+          </p>
+        </div>
+      </div>
+
+      <div class="blue_square"></div>
+
+      <div class="grid_repair">
+        <div>
+          <h2>MØD OLENA</h2>
+
+          <p>
+            <br /><br />Olena er en af de skønne kvinder, som kommer ud og reparerer jeres tøj. Olena er kommet til Danmark i forbindelse med krigen i Ukraine, og er én af de mange kvinder, som “ITMV” hjælper.
+            <br /><br /><br />
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+
+        <div>
+          <img src="img/olena.png" alt="Olena" class="olena" />
+        </div>
+      </div>
+
+      <div class="yellow_square2"></div>
+
+      <div>
+        <img src="img/stiplet_hjerte_linje.svg" alt="Stiplet hjerte linje" />
+      </div>
+
+      <div class="grid_repair">
+        <div>
+          <img src="img/showroom.png" alt="Showroom" class="showroom" />
+        </div>
+        <div class="itradmedverden">
+          <h2 class="itradmedverden">I TRÅD MED VERDEN</h2>
+
+          <p>
+            <br />Vi ønsker at vores partnere deler vores værdier, så vi i fællesskab kan tage ansvar for både mennesker og miljø. Vi tror på, at der skal være plads til alle på trods af forskeligheder, og at vi alle kan gøre en forskel. Et samarbejde med os, er et samarbejde med et stærkt fællesskab, som tør stå forrest i kampen for bedre arbejdspladser i hele landet.
+            <br /><br />
+            Vi er en socialøkonomisk virksomhed, så vores overskud går til forbedrede forhold for de skønne kvinder vi har ansat. <br />
+            <br />
+          </p>
+
+          <div class="grid_repair">
+            <div>
+              <img src="img/pudder.png" alt="Pudder" class="img_grid_3" />
+            </div>
+
+            <div><img src="img/stol.png" alt="Stol" class="img_grid_3" /></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="red_square2"></div>
+
+      <h2 class="mod_teamet">MØD TEAMET HER</h2>
+
+      <Teamet />
+
+      <h2 class="mod_teamet samarbejder">Læs om vores andre samarbejder her</h2>
+
+      <Samarbejder />
+    </main>
+
+    <footer>
+      <Footer />
+    </footer>
+  </body>
 </html>

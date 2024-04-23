@@ -1,0 +1,85 @@
+---
+import "../styles/styles.css";
+---
+
+<div class="samarbejde_grid">
+  <div class="samarbejde_div">
+    <a href="https://www.instagram.com/p/Cy8UeDIsRAA/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      ><img src="img/stilling.png" alt="Stilling" /><span>
+        <strong>STILLING X ITMV</strong>
+        <br /><br /> Fra Lundtoftegade til Bredgade🍚☁️🌙🐚🌬️🤍🪡 <br />
+        <br />Vi oplever at flere og flere bruger vores gardiner som rumdelere eller vægværker, og vi har længe drømt om at kunne vise hvordan gardinerne tilføre sanselighed, stoflighed og ro til de rum de er skabt til... <br /><br />
+        Læs mere</span
+      ></a
+    >
+  </div>
+
+  <div class="samarbejde_div">
+    <a href="https://www.instagram.com/p/CouH1oIMns9/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><img src="img/kunst_brandt.png" alt="Kunstmuseum Brandt" /><span><strong>KUNSTMUSEUM BRANDT X ITMV</strong> <br /><br /> I samarbejde med Kunstmuseum Brandt har vi skabt stemningsskabende tekstiler til spetaklet, samt masker, sølvvinger og kappe til legende gæster i aktivitetsrummet... <br /><br /> Læs mere</span></a>
+  </div>
+
+  <div class="samarbejde_div">
+    <a href="https://www.instagram.com/p/C4f10Ywste4/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><img src="img/ferm_living.png" alt="Stefani" /><span> <strong>FERM LIVING X ITMV</strong> <br /><br /> Du kan opleve udstillingen “THOUGHTS ~ Reflections on the future of design” i Ferm Living Boutique. Udstillingen er skabt af designer Cecilie Kvorning og er en installation der berører tanker omkring fremtidens bæredygtige design, og om de små valg vi alle træffer der også har en effekt i det store billede... <br /><br /> Læs mere</span></a>
+  </div>
+  <div class="samarbejde_div">
+    <a href="https://www.itmv.dk/pages/luna-staerke"
+      ><img src="img/luna.webp" alt="Luna" /><span>
+        <strong>Luna Stærke</strong>
+        <br /> Designassistent</span
+      ></a
+    >
+  </div>
+</div>
+
+<style>
+  /* Andre samarbejder */
+
+  .samarbejder {
+    margin-top: 10%;
+  }
+
+  .samarbejde_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 15px 140px;
+    gap: 50px;
+  }
+
+  .samarbejde_div {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .samarbejde_div img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .samarbejde_div span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(240, 240, 236, 0.653);
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    font-family: "Helvetica Neue Thin";
+    font-size: 1.3rem;
+    line-height: 30px;
+  }
+
+  .samarbejde_div:hover img {
+    transform: scale(1.1);
+  }
+
+  .samarbejde_div:hover span {
+    transform: translateY(0);
+  }
+</style>

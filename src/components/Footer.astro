@@ -1,0 +1,102 @@
+---
+import "../styles/styles.css";
+---
+
+<div class="footer_grid">
+  <div class="container">
+    <h3>Book et møde</h3>
+
+    <form action="#" method="post">
+      <div class="form-group">
+        <input type="text" id="name" name="name" required placeholder="Navn" />
+      </div>
+
+      <div class="form-group">
+        <input type="email" id="email" name="email" required placeholder="E-mail" />
+      </div>
+
+      <div class="form-group">
+        <textarea id="message" name="message" required placeholder="Besked"></textarea>
+      </div>
+
+      <input type="submit" value="Send" />
+    </form>
+  </div>
+
+  <div class="some">
+    <h3>Følg med</h3>
+
+    <div class="some_grid">
+      <div>
+        <img src="/public/img/instagram.svg" alt="Instagram" />
+      </div>
+      <div>
+        <img src="/public/img/linkedin.svg" alt="Linked In" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .footer_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    padding: 20px 40px;
+    background-color: var(--background-color);
+    color: var(--text-color-footer);
+  }
+
+  .container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+  h2 {
+    text-align: center;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    color: var(--text-color-footer);
+    box-sizing: border-box;
+    background-color: var(--background-color);
+  }
+  textarea {
+    height: 100px;
+  }
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: var(--text-color-footer);
+    color: #fff;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background-color: var(--text-color-footer);
+  }
+
+  .some_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40 px;
+    max-width: 80px;
+  }
+
+  placeholder-shown {
+    font-family: "Helvetica Neue Light";
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--text-color-footer);
+  }
+</style>

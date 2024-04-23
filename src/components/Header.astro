@@ -2,43 +2,42 @@
 import "../styles/styles.css";
 ---
 
-<div class="logo">
-  <a href="https://www.itmv.dk/"><img src="/img/itmv_logo.png" alt="ITMV_Logo" /></a>
+<div class="progress-container">
+  <div class="progress-bar" id="myBar"></div>
 </div>
-<div class="burger-menu">
-  <div class="burger-icon">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
+
+<div class="header">
+  <div class="logo">
+    <a href="https://www.itmv.dk/"><img src="/img/itmv_logo.png" alt="ITMV_Logo" /></a>
   </div>
+
+  <nav>
+    <ul class="menu">
+      <li><a href="https://www.itmv.dk/collections/all">Shop</a></li>
+      <li><a href="https://www.itmv.dk/pages/om-itmv">Om os</a></li>
+      <li><a href="https://www.itmv.dk/pages/samarbejde">Samarbejder</a></li>
+      <li><a href="https://www.itmv.dk/pages/donation">Støt</a></li>
+      <li><a href="https://www.itmv.dk/pages/contact">Kontakt</a></li>
+      <li><a href="#index.html">Webfeature</a></li>
+    </ul>
+  </nav>
 </div>
-<nav>
-  <ul class="menu">
-    <li><a href="https://www.itmv.dk/collections/all">Shop</a></li>
-    <li><a href="https://www.itmv.dk/pages/om-itmv">Om os</a></li>
-    <li><a href="https://www.itmv.dk/pages/samarbejde">Samarbejder</a></li>
-    <li><a href="https://www.itmv.dk/pages/donation">Støt</a></li>
-    <li><a href="https://www.itmv.dk/pages/contact">Kontakt</a></li>
-    <li><a href="#index.html">Webfeature</a></li>
-  </ul>
-</nav>
 
 <style>
   /* MENU */
 
-  header {
+  .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
     color: var(--text-color);
-    position: sticky;
-
     margin: 0;
     font-family: "Helvectica Neue", sans-serif;
     font-weight: 50;
     font-style: normal;
     letter-spacing: 0.01rem;
+    width: 100%;
   }
 
   .logo img {
@@ -75,67 +74,37 @@ import "../styles/styles.css";
     display: none;
   }
 
-  @media (max-width: 768px) {
-    .logo img {
-      max-width: 80px;
-    }
+  /* SCROLL BAR */
+  /* The progress container (grey background) */
+  .progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    background-color: #f1f1f1;
+  }
 
-    header {
-      flex-direction: column;
-      align-items: flex-start;
-      max-width: 100%;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    .menu {
-      display: none;
-    }
-
-    .menu.show {
-      display: flex;
-      flex-direction: column;
-      background-color: var(--background-color);
-      position: absolute;
-      top: 20%;
-      left: 10%;
-      width: 100%;
-      line-height: 1rem;
-    }
-
-    /* Stil burgermenu-ikonet */
-    .burger-icon {
-      width: 30px;
-      height: 20px;
-      position: relative;
-      cursor: pointer;
-    }
-
-    /* Stil linjerne i burgermenu-ikonet */
-    .line {
-      width: 100%;
-      height: 2px;
-      background-color: black;
-      position: absolute;
-      left: 0;
-      transition: transform 0.3s ease;
-    }
-
-    /* Stil til at dreje linjerne til et kryds */
-    .open .line:nth-child(1) {
-      transform: rotate(45deg);
-      top: 8px;
-    }
-
-    .open .line:nth-child(2) {
-      transform: rotate(-45deg);
-      top: 8px;
-    }
-
-    .open .line:nth-child(3) {
-      opacity: 0;
-    }
+  /* The progress bar (scroll indicator) */
+  .progress-bar {
+    height: 8px;
+    background: var(--logo-color);
+    width: 0%;
   }
 </style>
+
+<script>
+  window.onscroll = function () {
+    myFunction();
+  };
+
+  function myFunction() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+  }
+</script>

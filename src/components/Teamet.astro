@@ -32,13 +32,15 @@ import "../styles/styles.css";
   .grid_teamet {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin: 15px 140px;
+    margin: 50px 140px 17% 140px;
     gap: 30px;
+    z-index: 100;
   }
 
   .team_member {
     position: relative;
     overflow: hidden;
+    z-index: 100;
   }
 
   .team_member img {
@@ -46,6 +48,7 @@ import "../styles/styles.css";
     width: 100%;
     height: auto;
     transition: transform 0.3s ease;
+    z-index: 100;
   }
 
   .team_member span {
@@ -62,6 +65,7 @@ import "../styles/styles.css";
     font-family: "Helvetica Neue Thin";
     font-size: 1rem;
     line-height: 30px;
+    z-index: 100;
   }
 
   .team_member:hover img {

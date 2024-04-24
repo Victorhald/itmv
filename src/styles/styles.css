@@ -167,7 +167,7 @@ video {
   gap: 60px;
   width: 100%;
   padding: 5% 7%;
-  padding-top: 0;
+  padding-top: 20px;
 }
 
 .grid_repair {
@@ -213,6 +213,10 @@ video {
 .citat {
   font-style: italic;
   font-weight: 100;
+}
+
+strong {
+  font-size: 1.3rem;
 }
 
 .mod_r_teamet {

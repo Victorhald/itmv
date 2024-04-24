@@ -28,10 +28,10 @@ import "../styles/styles.css";
 
     <div class="some_grid">
       <div>
-        <img src="img/instagram.svg" alt="Instagram" />
+        <img src="img/instagram.svg" alt="Instagram" class="insta" />
       </div>
       <div>
-        <img src="img/linkedin.svg" alt="Linked In" />
+        <img src="img/linkedin.svg" alt="Linked In" class="linkedin" />
       </div>
     </div>
   </div>
@@ -42,20 +42,26 @@ import "../styles/styles.css";
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
-    padding: 20px 40px;
+    padding: 100px 40px;
     background-color: var(--background-color);
     color: var(--text-color-footer);
+    padding-bottom: 100px;
+  }
+
+  div.some {
+    width: 40%;
   }
 
   .container {
-    max-width: 400px;
-    margin: auto;
+    max-width: 563px;
+    margin-left: 100px;
   }
   h2 {
     text-align: center;
   }
   .form-group {
     margin-bottom: 20px;
+    margin-top: 30px;
   }
   label {
     display: block;
@@ -80,24 +86,63 @@ import "../styles/styles.css";
     padding: 10px;
     border: none;
     background-color: var(--text-color-footer);
-    color: #fff;
+    color: var(--background-color);
     cursor: pointer;
   }
   input[type="submit"]:hover {
-    background-color: var(--text-color-footer);
+    color: var(--text-color-footer);
+    background-color: var(--background-color);
+    border: 1px solid var(--text-color-footer);
+    font-weight: bold;
   }
 
   .some_grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40 px;
-    max-width: 80px;
+    gap: 10px;
+    max-width: 150px;
+    margin-top: 60px;
   }
 
-  placeholder-shown {
+  .some {
+    margin-left: 125px;
+  }
+
+  .insta {
+    width: 75px;
+    margin: 0;
+  }
+
+  .linkedin {
+    margin: 5px;
+    width: 63px;
+  }
+
+  input,
+  textarea {
     font-family: "Helvetica Neue Light";
     font-size: 1rem;
     text-transform: uppercase;
     color: var(--text-color-footer);
+    letter-spacing: 0.02rem;
+  }
+
+  @media (max-width: 768px) {
+    .footer_grid {
+      display: unset;
+    }
+
+    .container,
+    .some {
+      margin-left: 0;
+    }
+
+    .some {
+      margin: 80px 0;
+    }
+
+    .some_grid {
+      margin-top: 20px;
+    }
   }
 </style>

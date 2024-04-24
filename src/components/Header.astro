@@ -2,15 +2,10 @@
 import "../styles/styles.css";
 ---
 
-<div class="progress-container">
-  <div class="progress-bar"></div>
-</div>
-
-<div class="header">
+<header>
   <div class="logo">
     <a href="https://www.itmv.dk/"><img src="/img/itmv_logo.png" alt="ITMV_Logo" /></a>
   </div>
-
   <nav>
     <ul class="menu">
       <li><a href="https://www.itmv.dk/collections/all">Shop</a></li>
@@ -20,13 +15,18 @@ import "../styles/styles.css";
       <li><a href="https://www.itmv.dk/pages/contact">Kontakt</a></li>
       <li><a href="#index.html">Webfeature</a></li>
     </ul>
+    <div class="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
   </nav>
-</div>
+</header>
 
 <style>
   /* MENU */
 
-  .header {
+  /* .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,39 +72,139 @@ import "../styles/styles.css";
 
   .burger_menu {
     display: none;
+  } */
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    color: var(--text-color);
+    margin: 0;
+    font-family: "Helvectica Neue", sans-serif;
+    font-weight: 50;
+    text-transform: uppercase;
+    font-style: normal;
+    letter-spacing: 0.02rem;
+    width: 100%;
   }
 
-  /* SCROLL BAR */
-  /* Progress container (grå baggrund) */
-  .progress-container {
-    width: 100%;
-    height: 8px;
-    background: #ccc;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    background-color: #f1f1f1;
+  .logo img {
+    max-width: 100px;
+    height: auto;
   }
 
-  /* Progress bar (scroll indicator) */
-  .progress-bar {
-    height: 8px;
-    background: var(--logo-color);
-    width: 0%;
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu li:last-child {
+    margin-right: 0;
+  }
+
+  .menu a {
+    display: block;
+    padding: 0 35px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+    text-align: end;
+  }
+
+  .menu a:hover {
+    color: var(--logo-color);
+  }
+
+  .burger {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .burger .line {
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    margin-bottom: 5px;
+    transition: 0.2s linear;
+  }
+  .burger {
+    display: none;
+  }
+  @media screen and (max-width: 800px) {
+    .menu {
+      display: none;
+    }
+    .burger {
+      display: block;
+    }
+
+    header {
+      padding: 23px 0;
+    }
+
+    .logo img {
+      max-width: 70px;
+      height: auto;
+    }
+    .burger.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+      transition: 0.2s linear;
+    }
+
+    .burger.active .line:nth-child(2) {
+      opacity: 0;
+      transition: 0.15s linear;
+    }
+
+    .burger.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+      transition: 0.2s linear;
+    }
+
+    nav.active .menu {
+      display: block;
+      background-color: #fff;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    nav.active .menu li {
+      margin: 10px 0px;
+    }
+
+    nav.active .menu a {
+      font-size: 24px;
+    }
   }
 </style>
 
 <script>
-  window.onscroll = function () {
-    myFunction();
-  };
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector("nav");
+  const menu = document.querySelector(".menu");
+  const links = document.querySelectorAll(".menu li a");
 
-  function myFunction() {
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var scrolled = (winScroll / height) * 100;
-    document.getElementById("myBar").style.width = scrolled + "%";
-  }
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    nav.classList.toggle("active");
+  });
+
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      burger.classList.remove("active");
+      nav.classList.remove("active");
+    });
+  });
 </script>

@@ -73,8 +73,8 @@ import "../styles/styles.css";
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 75%;
-    height: 99.9%;
+    width: 85%;
+    height: 100%;
     background: rgba(240, 240, 236, 0.653);
     color: var(--text-color);
     text-align: center;
@@ -93,5 +93,25 @@ import "../styles/styles.css";
 
   .samarbejde_div:hover span {
     transform: translateY(0);
+  }
+
+  @media (max-width: 768px) {
+    .samarbejde_grid {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      justify-content: center;
+      width: 100%;
+      margin: 50px 0;
+    }
+
+    .samarbejde_div img {
+      max-width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 </style>

@@ -5,6 +5,7 @@ import Teamet from "../components/Teamet.astro";
 import Samarbejder from "../components/Samarbejder.astro";
 import Footer from "../components/Footer.astro";
 import Slideshow from "../components/Slideshow.astro";
+import Scrollbar from "../components/Scrollbar.astro";
 ---
 
 <html lang="en">
@@ -28,6 +29,7 @@ import Slideshow from "../components/Slideshow.astro";
   </head>
   <body>
     <header>
+      <Scrollbar />
       <Header />
     </header>
 
@@ -56,12 +58,11 @@ import Slideshow from "../components/Slideshow.astro";
             En investering i os er en investering i en bedre fremtid for udsatte kvinder - Tag ansvar i dag.
           </p>
         </div>
-        <div>
-          <img src="img/overste_img.png" alt="Kvinder" />
+
+        <div class="video-container">
+          <video src="https://creativemolly.dk/kea/09_indhold/itmv/webfeature/liv_interview.mp4" autoplay loop controls></video>
         </div>
       </div>
-
-      <div class="red_square"></div>
 
       <div class="grid_repair grid_repair_1">
         <div class="grid_2_tekst_1">
@@ -117,7 +118,7 @@ import Slideshow from "../components/Slideshow.astro";
 
       <div class="grid_repair">
         <div>
-          <h2>MØD REPAIR SERVICE TEAMET</h2>
+          <h2 class="mod_r_teamet">MØD REPAIR SERVICE TEAMET</h2>
 
           <p>
             <br />Olena er en af de skønne kvinder, som kommer ud og reparerer jeres tøj. Olena er kommet til Danmark som følge af krigen i Ukraine. Før hun kom til Danmark arbejdede hun som bibliotekar i Kiev i 30 år, men hun nævner selv, at hun her hos ITMV har fået hendes drømmejob.
@@ -133,11 +134,11 @@ import Slideshow from "../components/Slideshow.astro";
 
       <div class="yellow_square2"></div>
 
-      <div>
-        <img src="img/stiplet_hjerte_linje.svg" alt="Stiplet hjerte linje" />
-      </div>
+      <!-- <div>
+        <img src="img/stiplet_hjerte_linje.svg" alt="Stiplet hjerte linje" class="stiplet_hjerte" />
+      </div> -->
 
-      <div class="grid_repair">
+      <div class="grid_repair showroom_grid">
         <div>
           <img src="img/showroom.png" alt="Showroom" class="showroom" />
         </div>

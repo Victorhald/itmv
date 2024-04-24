@@ -33,7 +33,7 @@ body {
 /* FIRKANTER I BAGGRUNDEN */
 
 .yellow_square {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   width: 47%;
@@ -44,10 +44,10 @@ body {
 
 .blue_square {
   position: absolute;
-  top: 260%;
+  top: 2105px;
   left: 0;
   width: 70%;
-  height: 110%;
+  height: 80%;
   background-color: var(--blå-firkant); /* Farve på din firkant */
   z-index: -1; /* Sørg for, at baggrundslaget ligger bag resten af indholdet */
 }
@@ -86,7 +86,7 @@ h1 {
 h2 {
   font-family: "Helvetica Neue Light";
   font-size: 2.2rem;
-  line-height: 70px;
+  line-height: 50px;
   text-transform: uppercase;
   color: var(--text-color);
   letter-spacing: 0.05rem;
@@ -142,20 +142,19 @@ p {
 
 .grid_overst {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 1fr 1.3fr;
   gap: 40px;
   max-width: 100%;
   margin: 0 7%;
   overflow: hidden;
+  margin-right: 0;
 }
 
 /* Containerens proportion er 4:5, hvilket gør den højere end bred */
 
 /* Justerer videoen til at dække hele containeren */
 video {
-  width: 600px;
-  padding-left: 70px;
-  padding-top: 20px;
+  max-width: 100%;
 }
 
 .video-container {
@@ -175,6 +174,7 @@ video {
   background-color: var(--lyserød-firkant);
   width: 100%;
   margin: 55px 0;
+  padding-bottom: 0;
 }
 
 .bojle {

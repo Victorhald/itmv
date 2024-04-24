@@ -154,7 +154,7 @@ p {
 
 /* Justerer videoen til at dække hele containeren */
 video {
-  max-width: 100%;
+  max-width: 735px;
 }
 
 .video-container {
@@ -164,9 +164,11 @@ video {
 .grid_repair {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 150px;
   width: 80%;
-  margin: 2% auto;
+  padding: 5% 7%;
+  padding-right: 0;
+  padding-top: 0;
 }
 
 .grid_repair_1 {
@@ -183,7 +185,8 @@ video {
 }
 
 .hvad_kan {
-  margin: 0 10%;
+  padding: 5% 7%;
+  padding-bottom: 25px;
 }
 
 .grid_2_tekst_2 {
@@ -191,8 +194,8 @@ video {
 }
 
 .hjerte {
-  width: 25%;
-  margin: 2px 200px;
+  width: 35%;
+  margin-left: 150px;
 }
 
 .mod_r_teamet {

@@ -161,9 +161,18 @@ video {
   overflow: hidden;
 }
 
-.grid_repair {
+.grid_repair2 {
   display: grid;
   grid-template-columns: 1fr 1.7fr;
+  gap: 60px;
+  width: 100%;
+  padding: 5% 7%;
+  padding-top: 0;
+}
+
+.grid_repair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 90px;
   width: 100%;
   padding: 5% 7%;
@@ -193,8 +202,15 @@ video {
 }
 
 .hjerte {
-  width: 30%;
-  margin-left: 150px;
+  width: 15%;
+  margin-left: 320px;
+}
+
+.sanne {
+  text-align: center;
+}
+
+.citat {
 }
 
 .mod_r_teamet {

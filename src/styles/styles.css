@@ -44,10 +44,10 @@ body {
 
 .blue_square {
   position: absolute;
-  top: 2105px;
+  top: 2075px;
   left: 0;
   width: 70%;
-  height: 80%;
+  height: 90%;
   background-color: var(--blå-firkant); /* Farve på din firkant */
   z-index: -1; /* Sørg for, at baggrundslaget ligger bag resten af indholdet */
 }

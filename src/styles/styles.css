@@ -54,17 +54,17 @@ body {
 
 .yellow_square2 {
   position: absolute;
-  top: 381%;
+  top: 2808px;
   right: 0;
-  width: 45%;
-  height: 130%;
+  width: 60%;
+  height: 106%;
   background-color: var(--gul-firkant); /* Farve på din firkant */
   z-index: -1; /* Sørg for, at baggrundslaget ligger bag resten af indholdet */
 }
 
 .red_square2 {
   position: absolute;
-  top: 520%;
+  top: 3660px;
   left: 0;
   width: 65%;
   height: 90%;
@@ -235,7 +235,7 @@ strong {
 }
 
 .showroom_grid {
-  margin: 170px auto;
+  margin-top: 80px;
 }
 
 .showroom {
@@ -245,6 +245,10 @@ strong {
 
 .itradmedverden {
   margin: 0;
+}
+
+.stiplet_hjerte {
+  padding-top: 50px;
 }
 
 /* MØD TEAMET */

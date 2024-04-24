@@ -154,7 +154,7 @@ p {
 
 /* Justerer videoen til at dække hele containeren */
 video {
-  max-width: 735px;
+  max-width: 100%;
 }
 
 .video-container {
@@ -230,8 +230,10 @@ strong {
 }
 
 .img_grid_3 {
-  width: 170px;
-  height: 230px;
+  height: 337px;
+}
+.img_grid_4 {
+  height: 337px;
 }
 
 .showroom_grid {
@@ -255,6 +257,7 @@ strong {
 
 .mod_teamet {
   margin: 140px 140px 40px 140px;
+  margin-top: 20px;
 }
 
 .grid_teamet {
@@ -365,7 +368,7 @@ strong {
     position: fixed;
     top: 0;
     right: 0;
-    width: 47%;
+    width: 50%;
     height: 100%;
     background-color: var(--gul-firkant); /* Farve på din firkant */
     z-index: -1;
@@ -390,6 +393,21 @@ strong {
 
   .grid_repair {
     display: unset;
+  }
+
+  .grid_repair2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .hvad_kan {
+    padding: 0;
+    padding-bottom: 40px;
+  }
+
+  strong {
+    font-size: 1.18rem;
   }
 
   h1 {
@@ -480,6 +498,7 @@ strong {
 
   .hjerte {
     margin: 15px 120px;
+    width: 25%;
   }
 
   .stiplet_hjerte {

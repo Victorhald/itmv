@@ -33,6 +33,9 @@ import "../styles/styles.css";
       <div>
         <img src="img/linkedin.svg" alt="Linked In" class="linkedin" />
       </div>
+      <div>
+        <img src="img/facebook.svg" alt="facebook" class="facebook" />
+      </div>
     </div>
   </div>
 </div>
@@ -43,7 +46,9 @@ import "../styles/styles.css";
     grid-template-columns: 1fr 1fr;
     width: 100%;
     padding: 100px 40px;
+
     background-color: var(--background-color);
+
     color: var(--text-color-footer);
     padding-bottom: 100px;
   }
@@ -82,7 +87,7 @@ import "../styles/styles.css";
   }
 
   input[type="submit"] {
-    width: 100%;
+    width: 20%;
     padding: 10px;
     border: none;
     background-color: var(--text-color-footer);
@@ -97,11 +102,10 @@ import "../styles/styles.css";
   }
 
   .some_grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    max-width: 150px;
-    margin-top: 60px;
+    display: flex;
+    gap: 5px;
+    max-width: 100%;
+    margin-top: 20px;
   }
 
   .some {
@@ -109,13 +113,18 @@ import "../styles/styles.css";
   }
 
   .insta {
-    width: 75px;
+    width: 60px;
     margin: 0;
   }
 
   .linkedin {
     margin: 5px;
-    width: 63px;
+    width: 50px;
+  }
+
+  .facebook {
+    width: 54px;
+    padding-top: 2px;
   }
 
   input,

@@ -67,7 +67,7 @@ body {
   top: 3660px;
   left: 0;
   width: 65%;
-  height: 90%;
+  height: 67%;
   background-color: var(--lyserød-firkant); /* Farve på din firkant */
   z-index: -1; /* Sørg for, at baggrundslaget ligger bag resten af indholdet */
 }
@@ -265,6 +265,7 @@ strong {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin: 15px 140px;
   gap: 30px;
+  margin-bottom: 0;
 }
 
 .team_member {
@@ -306,7 +307,7 @@ strong {
 /* Andre samarbejder */
 
 .samarbejder {
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .samarbejde_grid {
@@ -352,6 +353,10 @@ strong {
 
 .samarbejde_div:hover span {
   transform: translateY(0);
+}
+
+footer {
+  background-color: #ecebe0;
 }
 
 @media (max-width: 768px) {
@@ -501,7 +506,8 @@ strong {
     width: 25%;
   }
 
-  .stiplet_hjerte {
+  .stiplet_hjerte,
+  .stiplet_hjerte2 {
     display: none;
   }
 

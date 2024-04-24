@@ -271,7 +271,7 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   width: 80%;
-  margin: 7% auto;
+  margin: 2% auto;
 }
 
 .grid_repair_1 {
@@ -292,8 +292,8 @@ p {
 }
 
 .hjerte {
-  width: 30%;
-  margin: 2px 207px;
+  width: 25%;
+  margin: 2px 200px;
 }
 
 .olena {

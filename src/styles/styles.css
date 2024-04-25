@@ -54,7 +54,7 @@ body {
 
 .yellow_square2 {
   position: absolute;
-  top: 2808px;
+  top: 2776px;
   right: 0;
   width: 60%;
   height: 106%;
@@ -64,7 +64,7 @@ body {
 
 .red_square2 {
   position: absolute;
-  top: 3660px;
+  top: 3600px;
   left: 0;
   width: 65%;
   height: 67%;
@@ -155,6 +155,7 @@ p {
 /* Justerer videoen til at dække hele containeren */
 video {
   max-width: 100%;
+  margin-top: 20px;
 }
 
 .video-container {
@@ -213,6 +214,13 @@ video {
 .citat {
   font-style: italic;
   font-weight: 100;
+}
+
+.symaskine {
+  width: 10%;
+  position: absolute;
+  left: 650px;
+  top: 2600px;
 }
 
 strong {
